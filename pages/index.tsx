@@ -7,6 +7,8 @@ import { parser, generator } from 'csv';
 import Axios from 'axios';
 import { useEffect } from 'react';
 
+const converter = (data: any) => {};
+
 const fetcher = (url: string) =>
   Axios.request({ url }).then((response) => {
     let { data, headers, status } = response;

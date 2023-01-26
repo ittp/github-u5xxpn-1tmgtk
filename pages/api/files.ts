@@ -22,11 +22,13 @@ export default function handler(
   let data = dir.map((file) => {
     let filename = path.join(pub, file);
 
-    let raw = readFileSync(filename, { charset: 'UTF-8' }).toString();
+    let raw = readFileSync(filename).toString();
 
     console.log(raw);
 
     return raw;
+
+    
   });
 
   let jsonData = Array.from(data);
